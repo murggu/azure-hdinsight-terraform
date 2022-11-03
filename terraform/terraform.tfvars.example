@@ -1,0 +1,27 @@
+prefix   = "murggu"
+location = "East US 2"
+
+# See https://learn.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning 
+cluster_version               = "4.0"
+component_version_hadoop      = "3.1"
+component_version_spark       = "2.4"
+component_version_kafka       = "2.1"
+component_version_interactive = "3.1"
+component_version_hbase       = "2.1"
+
+gateway_username                        = "adminuser"
+gateway_password                        = "This1sNotVerySecure!"
+ssh_username                            = "sshuser"
+ssh_password                            = "This1sNotVerySecure!"
+roles_head_node_vm_size                 = "A5"
+roles_worker_node_vm_size               = "A5"
+roles_worker_node_target_instance_count = 2
+roles_zookeeper_node_vm_size            = "Small"
+tier                                    = "Standard"
+
+# Feature flags
+enable_hadoop_cluster      = true
+enable_spark_cluster       = false
+enable_kafka_cluster       = false
+enable_hive_cluster        = false
+enable_interactive_cluster = false
