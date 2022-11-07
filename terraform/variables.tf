@@ -144,3 +144,8 @@ variable "enable_hbase_cluster" {
   description = "Variable to enable or disable HBase cluster deployment"
   default     = false
 }
+
+variable "enable_adls2" {
+  description = "Variable to enable or disable ADLS Gen2"
+  default     = false
+}

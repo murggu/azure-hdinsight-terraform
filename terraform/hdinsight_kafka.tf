@@ -55,10 +55,17 @@ resource "azurerm_hdinsight_kafka_cluster" "hdi_kafka" {
     }
   }
 
-  storage_account {
-    storage_container_id = azurerm_storage_container.hdi_st_container.id
-    storage_account_key  = azurerm_storage_account.hdi_st.primary_access_key
-    is_default           = var.storage_account_is_default
+  # storage_account {
+  #   storage_container_id = azurerm_storage_container.hdi_st_container[0].id
+  #   storage_account_key  = azurerm_storage_account.hdi_st.primary_access_key
+  #   is_default           = var.storage_account_is_default
+  # }
+
+  storage_account_gen2 {
+    storage_resource_id          = azurerm_storage_account.hdi_st.id
+    filesystem_id                = azurerm_storage_data_lake_gen2_filesystem.hdi_ws_adls[0].id
+    is_default                   = var.storage_account_is_default
+    managed_identity_resource_id = azurerm_user_assigned_identity.hdi_id.id
   }
 
   metastores {
