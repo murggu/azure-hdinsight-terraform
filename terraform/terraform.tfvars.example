@@ -25,3 +25,5 @@ enable_spark_cluster       = false
 enable_kafka_cluster       = false
 enable_hive_cluster        = false
 enable_interactive_cluster = false
+
+enable_adls2 = true
