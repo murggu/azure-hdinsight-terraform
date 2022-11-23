@@ -20,10 +20,10 @@ roles_zookeeper_node_vm_size            = "Small"
 tier                                    = "Standard"
 
 # Feature flags
-enable_hadoop_cluster      = true
-enable_spark_cluster       = false
-enable_kafka_cluster       = false
-enable_hive_cluster        = false
-enable_interactive_cluster = false
+enable_hadoop_cluster       = true
+enable_spark_cluster        = false
+enable_kafka_cluster        = false
+enable_hbase_cluster        = false
+enable_interactive_cluster  = false
 
 enable_adls2 = true
